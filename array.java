@@ -27,10 +27,10 @@ class array{
         return -1; 
     }
     public static void main(String[] args) {
-    int arr[]=new int[4];
+    int arr[]=new int[15];
     Scanner sc = new Scanner(System.in);
     System.out.println("enter elements");
-    for(int i=0; i<4;i++){
+    for(int i=0; i<15;i++){
         arr[i]=sc.nextInt();
     }
     System.out.println("index : ");
