@@ -1,5 +1,11 @@
+import java.util.Arrays;
 import java.util.Scanner;
-public class array{
+import java.util.stream.IntStream;
+class array{
+    private static void check(int[] arr, int toCheckValue){
+        boolean test = IntStream.of(arr).anyMatch(x -> x == toCheckValue);
+        System.out.println("Is"+ toCheckValue + "present in the array: " +test);
+    }
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int arr[]=new int[4];
@@ -12,7 +18,8 @@ public class array{
         System.out.println(i);
     }
     System.out.println("User Num:");
-    int u = sc.nextInt();
-   System.out.println(u);
+    int toCheckValue = sc.nextInt();
+    System.out.println("Array:" + Arrays.toString(arr));
+    check(arr, toCheckValue);
     }
 }
