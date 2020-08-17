@@ -4,7 +4,11 @@ import java.util.stream.IntStream;
 class array{
     private static void check(int[] arr, int toCheckValue){
         boolean test = IntStream.of(arr).anyMatch(x -> x == toCheckValue);
-        System.out.println("Is"+ toCheckValue + "present in the array: " +test);
+        if (test == true){
+            System.out.println(toCheckValue+" is present in the array");
+        }else{
+            System.out.println(toCheckValue+" is not present in the array");
+        }
     }
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -17,7 +21,7 @@ class array{
         System.out.println("The elements are:");
         System.out.println(i);
     }
-    System.out.println("User Num:");
+    System.out.println("index : ");
     int toCheckValue = sc.nextInt();
     System.out.println("Array:" + Arrays.toString(arr));
     check(arr, toCheckValue);
