@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class array{
-public static void main(String []args){
+    public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int arr[]=new int[4];
     System.out.println("enter elements");
@@ -11,6 +11,8 @@ public static void main(String []args){
         System.out.println("The elements are:");
         System.out.println(i);
     }
-    System.out.println(arr);
+    System.out.println("User Num:");
+    int u = sc.nextInt();
+   System.out.println(u);
     }
 }
