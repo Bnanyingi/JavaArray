@@ -5,10 +5,26 @@ class array{
     private static void check(int[] arr, int toCheckValue){
         boolean test = IntStream.of(arr).anyMatch(x -> x == toCheckValue);
         if (test == true){
-            System.out.println(toCheckValue+" is present in the array");
+            System.out.println(toCheckValue+"is found at index "+findIndex(arr, toCheckValue));
         }else{
-            System.out.println(toCheckValue+" is not present in the array");
+            System.out.println(toCheckValue+" is not present in the array"+findIndex(arr, toCheckValue) );
         }
+    }
+    public static int findIndex(int arr[], int toCheckValue){
+          if (arr == null) { 
+            return -1; 
+        } 
+        int len = arr.length; 
+        int i = 0; 
+        while (i < len) { 
+            if (arr[i] == toCheckValue) { 
+                return i; 
+            } 
+            else { 
+                i = i + 1; 
+            } 
+        } 
+        return -1; 
     }
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
