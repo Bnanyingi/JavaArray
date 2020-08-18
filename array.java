@@ -30,17 +30,17 @@ class array{
     int arr[]=new int[15];
     Scanner sc = new Scanner(System.in);
     System.out.println("enter elements");
-    for(int i=0; i<15;i++){
-        arr[i]=sc.nextInt();
-    }
+        for(int i=0; i<15;i++){
+          arr[i]=sc.nextInt();
+        }
     System.out.println("index : ");
     int toCheckValue = sc.nextInt();
     System.out.println("Array:" + Arrays.toString(arr));
     check(arr, toCheckValue);
 
     System.out.println("Original Array:");
-    for(int i=0;i<arr.length;i++)
-         System.out.print(arr[i] + "  ");
+        for(int i=0;i<arr.length;i++)
+            System.out.print(arr[i] + "  ");
      
     System.out.println();
      
@@ -51,10 +51,10 @@ class array{
 
     int summation = 0;
     int prod = 1;
-    for (int i: arr){
-        summation += i;
-        prod *= i;
-    }
+        for (int i: arr){
+            summation += i;
+            prod *= i;
+        }
     System.out.println("\n the sum of the array is :"+summation);
     System.out.println("\n the product of the array is :"+prod);
     System.out.println("\n Enter no to be checked if palindrome: ");
@@ -62,16 +62,15 @@ class array{
     Scanner bc =new Scanner(System.in);
     int n = bc.nextInt();
     temp=n;    
-    while(n>0){    
-     r=n%10; 
-     sum=(sum*10)+r;    
-     n=n/10;    
-    }    
-    if(temp==sum){  
-     System.out.println("The number is a palindrome ");    
-    }else{
-     System.out.println("The number is not a palindrome"); 
-    }   
+        while(n>0){    
+            r=n%10; 
+            sum=(sum*10)+r;    
+            n=n/10;    
+        }    
+        if(temp==sum){  
+            System.out.println("The number is a palindrome ");    
+        }else{
+            System.out.println("The number is not a palindrome"); 
+        }   
   } 
- 
 }
